@@ -15,7 +15,7 @@ const jobInitialStatus = {
 export default function Dashboard() {
   const [jobs, setJobs] = useState([]);
 
-  const apiJobBaseURL = "http://localhost:3001/jobs";
+  const apiJobBaseURL = process.env.REACT_APP_API_URL;
   useEffect(() => {
     getJobs();
   }, []);
